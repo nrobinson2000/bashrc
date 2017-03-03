@@ -23,11 +23,14 @@ red_echo()
 }
 
 # ls
-alias la="ls -la"
+alias la="ls -a"
 alias lh="ls -lah"
 alias l="ls"
+alias ll="ls -la"
+
 
 # Handy Shortcuts
+alias bash="$SHELL"
 alias grep="grep --color=auto"
 alias ..="cd .."
 alias c="clear"
