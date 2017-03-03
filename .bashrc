@@ -56,22 +56,15 @@ then
 fi
 
 # Serial Shortcuts
-
-if [ "$(uname -s)" == "Darwin" ];
-then
-
-  function get-modem()
-  {
+function get-modem()
+{
+  if [ "$(uname -s)" == "Darwin" ];
+  then
     modem="$(ls -1 /dev/cu.* | grep -vi bluetooth | tail -1)"
-  }
-
-else
-  function get-modem()
-  {
+  else
     modem="$(ls -1 /dev/* | grep "ttyACM" | tail -1)"
-  }
-fi
-
+  fi
+}
 
 function console() {
   get-modem
