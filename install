@@ -11,7 +11,7 @@ if ! [ -f "$HOME/.bashrc" ];
 then
   curl -fLoSs "https://raw.githubusercontent.com/nrobinson2000/bashrc/master/.bashrc" "$HOME/.bashrc"
 else
-  curl -fLSs "https://raw.githubusercontent.com/nrobinson2000/bashrc/master/.bashrc" >> "$HOME/.bashrc"
+  curl -L "https://raw.githubusercontent.com/nrobinson2000/bashrc/master/.bashrc" >> "$HOME/.bashrc"
 fi
 
 echo
