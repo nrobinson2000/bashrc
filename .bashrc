@@ -58,6 +58,7 @@ fi
 # Serial Shortcuts
 
 if [ "$(uname -s)" == "Darwin" ];
+then
 
 function get-modem()
 {
