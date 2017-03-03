@@ -113,7 +113,7 @@ function pull-all()
   cd "$CWD"
 }
 
-# Misc Shortcuts
+# Miscelaneous Shortcuts
 function locate() # Find the location of a file in a specified folder (locate ~ text.txt)
 {
   find "$1" -name "$2" -print
