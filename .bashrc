@@ -92,7 +92,7 @@ function update()
   cd "$(pwd)"
   git add -A
   #git commit -S -m "$1 at $(date +"%H:%M") of $(date +"%d-%m-%Y")" # Uncomment for GPG signed commits
-  git commit -m "$1 at $(date +"%H:%M") of $(date +"%d-%m-%Y")"  # Comment for GPG signed commits
+  git commit -m "$1 at $(date +"%H:%M") of $(date +"%Y-%m-%d")"  # Comment for GPG signed commits
   git push -u origin $(git rev-parse --abbrev-ref HEAD)
 }
 
