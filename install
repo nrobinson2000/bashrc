@@ -2,14 +2,14 @@
 echo
 echo "Installing .bashrc..."
 
-if ! [ -f "$HOME/.profile" ] || ! [ -f "$HOME/.bash_profile" ];
+if ! ( [ -f "$HOME/.profile" ] || [ -f "$HOME/.bash_profile" ] );
 then
-  curl -fLoSs "https://raw.githubusercontent.com/nrobinson2000/bashrc/master/.bash_profile" "$HOME/.bash_profile"
+  curl -fLSso "https://raw.githubusercontent.com/nrobinson2000/bashrc/master/.bash_profile" "$HOME/.bash_profile"
 fi
 
 if ! [ -f "$HOME/.bashrc" ];
 then
-  curl -fLoSs "https://raw.githubusercontent.com/nrobinson2000/bashrc/master/.bashrc" "$HOME/.bashrc"
+  curl -fLSso "https://raw.githubusercontent.com/nrobinson2000/bashrc/master/.bashrc" "$HOME/.bashrc"
 else
   curl -L "https://raw.githubusercontent.com/nrobinson2000/bashrc/master/.bashrc" >> "$HOME/.bashrc"
 fi
