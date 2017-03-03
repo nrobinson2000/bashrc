@@ -1,13 +1,13 @@
 #!/bin/bash
 
-if ![ -f "~/.profile" ] || ![ -f "~/.bash_profile"];
+if ! [ -f "$HOME/.profile" ] || ! [ -f "$HOME/.bash_profile" ];
 then
-  curl -fLoSs "https://raw.githubusercontent.com/nrobinson2000/bashrc/master/.bash_profile" "~/.bash_profile"
+  curl -fLoSs "https://raw.githubusercontent.com/nrobinson2000/bashrc/master/.bash_profile" "$HOME/.bash_profile"
 fi
 
-if ![ -f "~/.bashrc" ];
+if ! [ -f "$HOME/.bashrc" ];
 then
-  curl -fLoSs "https://raw.githubusercontent.com/nrobinson2000/bashrc/master/.bashrc" "~/.bashrc"
+  curl -fLoSs "https://raw.githubusercontent.com/nrobinson2000/bashrc/master/.bashrc" "$HOME/.bashrc"
 else
-  curl -fLSs "https://raw.githubusercontent.com/nrobinson2000/bashrc/master/.bashrc" >> "~/.bashrc"
+  curl -fLSs "https://raw.githubusercontent.com/nrobinson2000/bashrc/master/.bashrc" >> "$HOME/.bashrc"
 fi
