@@ -34,7 +34,6 @@ alias c="clear"
 alias cls="c && ls"
 alias n="nano"
 alias ca='cat'
-alias -="cd -"
 alias home='cd && clear && ls'
 
 # Tools
