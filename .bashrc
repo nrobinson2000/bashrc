@@ -45,7 +45,7 @@ alias sf='screenfetch'
 alias nf="echo && neofetch"
 
 #Mac OS Only
-if [ "!(uname -s)" == "Darwin" ];
+if [ "$(uname -s)" == "Darwin" ];
 then
   alias ls="ls -G"
   alias htop='sudo htop'
