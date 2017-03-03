@@ -59,7 +59,7 @@ fi
 alias get-modem="$(ls -1 /dev/cu.* | grep -vi bluetooth | tail -1)"
 
 function console {
-  modem=`ls -1 /dev/cu.* | grep -vi bluetooth | tail -1`
+  modem="$(ls -1 /dev/cu.* | grep -vi bluetooth | tail -1)"
   baud=${1:-9600}
   if [ ! -z "$modem" ]; then
     screen "$modem" "$baud"
