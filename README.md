@@ -1,8 +1,8 @@
 # bashrc
 
-This is my `.bashrc` that I use on all of my computers.
+I created this project to provide an easy method for setting up a useful `.bashrc` on computers that do not have one yet, particularly on macOS.
 
-# Install:
+# Run the command below to Install:
 
 ```
 bash <( curl -sL https://raw.githubusercontent.com/nrobinson2000/bashrc/master/install )
