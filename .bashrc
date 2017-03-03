@@ -60,10 +60,10 @@ fi
 if [ "$(uname -s)" == "Darwin" ];
 then
 
-function get-modem()
-{
-  modem="$(ls -1 /dev/cu.* | grep -vi bluetooth | tail -1)"
-}
+  function get-modem()
+  {
+    modem="$(ls -1 /dev/cu.* | grep -vi bluetooth | tail -1)"
+  }
 
 else
   function get-modem()
