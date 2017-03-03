@@ -23,7 +23,6 @@ red_echo()
 }
 
 # ls
-alias ls="ls -G"
 alias la="ls -la"
 alias lh="ls -lah"
 alias l="ls"
@@ -49,6 +48,7 @@ alias nf="echo && neofetch"
 #Mac OS Only
 if [ "!(uname -s)" == "Darwin" ];
 then
+  alias ls="ls -G"
   alias htop='sudo htop'
   alias atom='open -a Atom'
   alias chrome='open -a Google\ Chrome'
