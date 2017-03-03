@@ -119,4 +119,4 @@ function locate() # Find the location of a file in a specified folder (locate ~ 
   find "$1" -name "$2" -print
 }
 
-# Add your own stuff below
+# Add your own stuff below...
