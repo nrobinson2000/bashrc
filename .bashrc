@@ -56,10 +56,24 @@ then
 fi
 
 # Serial Shortcuts
-alias get-modem="$(ls -1 /dev/cu.* | grep -vi bluetooth | tail -1)"
 
-function console {
+if [ "$(uname -s)" == "Darwin" ];
+
+function get-modem()
+{
   modem="$(ls -1 /dev/cu.* | grep -vi bluetooth | tail -1)"
+}
+
+else
+  function get-modem()
+  {
+    modem="$(ls -1 /dev/* | grep "ttyACM" | tail -1)"
+  }
+fi
+
+
+function console() {
+  get-modem
   baud=${1:-9600}
   if [ ! -z "$modem" ]; then
     screen "$modem" "$baud"
