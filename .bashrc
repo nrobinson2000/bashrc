@@ -1,7 +1,7 @@
 # This is your .bashrc
 # All aliases, functions, settings, and other sortcuts can be defined here
 # Contribute to this .bashrc at https://github.com/nrobinson2000/bashrc
-# Copyright (GPL) Nathan D. Robinson 2017
+# Copyright (GPL) Nathan D Robinson 2017
 
 # Exports
 export GPG_TTY=$(tty)
