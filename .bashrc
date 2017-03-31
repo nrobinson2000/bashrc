@@ -14,17 +14,17 @@ export PARTICLE_DEVELOP=1
 
 blue_echo()
 {
-  echo "$(tput setaf 6)$(tput bold)$MESSAGE$(tput sgr0)"
+  echo "$(tput setaf 6)$(tput bold)$1$(tput sgr0)"
 }
 
 green_echo()
 {
-  echo "$(tput setaf 2)$(tput bold)$MESSAGE$(tput sgr0)"
+  echo "$(tput setaf 2)$(tput bold)$1$(tput sgr0)"
 }
 
 red_echo()
 {
-  echo "$(tput setaf 1)$(tput bold)$MESSAGE$(tput sgr0)"
+  echo "$(tput setaf 1)$(tput bold)$1$(tput sgr0)"
 }
 
 # ls
@@ -91,7 +91,7 @@ function update()
 {
   cd "$(pwd)"
   git add -A
-  #git commit -S -m "$1 at $(date +"%H:%M") of $(date +"%Y-%m-%d")" # Replace the line below with this one for GPG signed commits
+  # git commit -S -m "$1 at $(date +"%H:%M") of $(date +"%Y-%m-%d")" # Replace the line below with this one for GPG signed commits
   git commit -m "$1 at $(date +"%H:%M") of $(date +"%Y-%m-%d")"
   git push -u origin $(git rev-parse --abbrev-ref HEAD)
 }
@@ -117,6 +117,11 @@ function pull-all()
 function locate() # Find the location of a file in a specified folder (locate ~ text.txt)
 {
   find "$1" -name "$2" -print
+}
+
+function mkcd()
+{
+mkdir -p "$1" && cd "$1"
 }
 
 # Add your own stuff below...
