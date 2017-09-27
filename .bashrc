@@ -28,7 +28,7 @@ red_echo()
 }
 
 # ls
-alias la="ls -a"
+alias la="ls -A"
 alias lh="ls -lah"
 alias l="ls"
 alias ll="ls -la"
@@ -86,12 +86,13 @@ function console() {
 
 # Git Shortcuts
 alias pull="git pull"
+alias check="git checkout"
 
 function update()
 {
   cd "$(pwd)"
   git add -A
-  # git commit -S -m "$1 at $(date +"%H:%M") of $(date +"%Y-%m-%d")" # Replace the line below with this one for GPG signed commits
+  #git commit -S -m "$1 at $(date +"%H:%M") of $(date +"%Y-%m-%d")" # Replace the line below with this one for GPG signed commits
   git commit -m "$1 at $(date +"%H:%M") of $(date +"%Y-%m-%d")"
   git push -u origin $(git rev-parse --abbrev-ref HEAD)
 }
@@ -105,7 +106,7 @@ function pull-all()
     if [ -d "$CWD/$OUTPUT/.git" ]; # Only do git pull if it is a repository
     then
       cd "$CWD/$OUTPUT"
-      MESSAGE="Pulling $OUTPUT..." ; blue_echo
+      blue_echo "Pulling $OUTPUT..."
       git pull
       echo
     fi
@@ -123,5 +124,18 @@ function mkcd()
 {
 mkdir -p "$1" && cd "$1"
 }
+
+alias run="npm start"
+alias setup="npm install"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+source $HOME/.cargo/env
+
+alias skip-ci="update '[skip ci]'"
+
+[ -f "$HOME/github/particle-cli-completion/particle-cli.completion" ] && source "$HOME/github/particle-cli-completion/particle-cli.completion"
+[ -f /usr/local/etc/bash_completion ] && source /usr/local/etc/bash_completion
 
 # Add your own stuff below...
