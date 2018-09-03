@@ -131,7 +131,7 @@ alias setup="npm install"
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
-source $HOME/.cargo/env
+[ -f $HOME/.cargo/env ] && source $HOME/.cargo/env
 
 alias skip-ci="update '[skip ci]'"
 
