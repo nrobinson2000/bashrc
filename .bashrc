@@ -7,7 +7,7 @@
 export GPG_TTY=$(tty)
 export GOPATH=$HOME/go/
 export PS1="\[$(tput setaf 1)\]\[$(tput bold)\]\t\[$(tput sgr0)\] \[$(tput setaf 6)\]\[$(tput bold)\]\u\[$(tput sgr0)\]\[$(tput setaf 5)\]\[$(tput bold)\]@\[$(tput setaf 7)\]\[$(tput bold)\]\h:\[$(tput sgr0)\]\[$(tput setaf 4)\]\[$(tput bold)\]\w $ \[$(tput sgr0)\]"
-export EDITOR="nano"
+export EDITOR="vim"
 export PARTICLE_DEVELOP=1
 
 # Colored Echos
