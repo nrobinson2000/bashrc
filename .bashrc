@@ -10,6 +10,9 @@ export PS1="\[$(tput setaf 1)\]\[$(tput bold)\]\t\[$(tput sgr0)\] \[$(tput setaf
 export EDITOR="vim"
 export PARTICLE_DEVELOP=1
 
+# Set terminal title
+export PS1="\[\e]0;\w\a\]$PS1"
+
 # Colored Echos
 
 blue_echo()
